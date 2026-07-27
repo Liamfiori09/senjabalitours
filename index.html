@@ -276,7 +276,7 @@ nav{
 
 /* ---------- Extras ---------- */
 #extras{background:var(--sand)}
-.extras-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.extras-grid{display:grid;grid-template-columns:1fr;max-width:520px}
 .extra{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
 .extra .badge{
   display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
@@ -348,35 +348,6 @@ footer a:hover{color:var(--gold-soft)}
 }
 .wa-float:hover{transform:scale(1.08)}
 
-/* ---------- Welcome popup ---------- */
-.pop-back{
-  position:fixed;inset:0;background:rgba(23,28,20,.55);backdrop-filter:blur(3px);
-  z-index:90;display:none;align-items:center;justify-content:center;padding:20px;
-}
-.pop-back.open{display:flex}
-.pop{
-  background:var(--ivory);border-radius:22px;max-width:420px;width:100%;
-  padding:38px 32px 32px;text-align:center;position:relative;overflow:hidden;
-  animation:pop .35s ease;
-}
-.pop .pop-sun{
-  position:absolute;top:-120px;left:50%;transform:translateX(-50%);
-  width:300px;height:300px;border-radius:50%;
-  background:radial-gradient(circle,var(--gold-soft),transparent 70%);opacity:.6;pointer-events:none;
-}
-.pop .gift{font-size:44px;margin-bottom:10px;position:relative}
-.pop h3{font-size:26px;margin-bottom:10px;position:relative}
-.pop h3 em{font-style:italic;color:var(--gold)}
-.pop p{font-size:14.5px;color:var(--ink-soft);margin-bottom:22px;position:relative}
-.pop .btn{margin-top:0;position:relative}
-.pop .no{
-  display:inline-block;margin-top:14px;font-size:13px;color:var(--ink-soft);
-  background:none;border:none;cursor:pointer;text-decoration:underline;font-family:'Figtree';position:relative;
-}
-.pop-close{
-  position:absolute;top:12px;right:14px;background:none;border:none;font-size:22px;
-  cursor:pointer;color:var(--ink-soft);z-index:2;
-}
 
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -426,6 +397,12 @@ footer a:hover{color:var(--gold-soft)}
       <h1>Bali, driven <em>the way locals live it.</em></h1>
       <p class="hero-sub">Fixed-price transfers and thoughtfully curated day tours in a spotless, air-conditioned car — with free Wi-Fi on board and a driver who calls this island home.</p>
       <div class="hero-points">
+        <span><b>✈️</b> Airport transfers</span>
+        <span><b>🚗</b> A-to-B transfers</span>
+        <span><b>🎯</b> Activity packs</span>
+        <span><b>🌴</b> Full & custom day tours</span>
+      </div>
+      <div class="hero-points" style="margin-top:10px">
         <span><b>✓</b> Fixed prices, no haggling</span>
         <span><b>✓</b> Wi-Fi &amp; AC on board</span>
         <span><b>✓</b> Up to 6 seats · groups to 13</span>
@@ -460,7 +437,7 @@ footer a:hover{color:var(--gold-soft)}
     <span>🚐 Clean, fresh-scented 6-seater</span>
     <span>📶 Free Wi-Fi on every ride</span>
     <span>🇮🇩 English-speaking Balinese driver</span>
-    <span>🎁 Welcome pack on all tours</span>
+    <span>🚁 Drone footage included on every tour</span>
   </div>
 </div>
 
@@ -499,7 +476,7 @@ footer a:hover{color:var(--gold-soft)}
       <p>One-way, private car, up to 6 passengers with luggage. Waiting time and tolls included. Tap any route to book it.</p>
     </div>
     <div class="routes" id="routesList"></div>
-    <p class="routes-note">Don't see your route? <a href="#" class="wa-link" data-msg="Hi Senja! I need a transfer quote for a custom route:">Message us on WhatsApp</a> and we'll send a fixed quote in minutes. Night pickups (10pm–6am) +IDR 100k.</p>
+    <p class="routes-note">Don't see your route? <a href="#" class="wa-link" data-msg="Hi Senja! I need a transfer quote for a custom route:">Message us on WhatsApp</a> and we'll send a fixed quote in minutes. Night pickups (10pm–6am) +IDR 100k. Airport pickups cost slightly more than airport drop-offs due to parking fees.</p>
   </div>
 </section>
 
@@ -518,24 +495,14 @@ footer a:hover{color:var(--gold-soft)}
 <section id="extras">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Included &amp; add-ons</p>
-      <h2>Little things that make the day.</h2>
+      <p class="eyebrow">Beyond the tour</p>
+      <h2>Want activities too?</h2>
     </div>
     <div class="extras-grid">
       <div class="extra">
-        <span class="badge">Free on every tour</span>
-        <h3>Senja welcome pack</h3>
-        <p>Cold water, local snacks, sunscreen sachets and a mini guide of your route — waiting on your seat when we pick you up.</p>
-      </div>
-      <div class="extra">
-        <span class="badge">Add-on · IDR 450k</span>
-        <h3>Drone film of your day</h3>
-        <p>Cinematic aerial shots of you at the rice terraces, waterfalls and coastline — edited into a short film delivered within 48h.</p>
-      </div>
-      <div class="extra">
-        <span class="badge">Add-on · IDR 550k</span>
-        <h3>Printed photo book</h3>
-        <p>Your driver captures candid moments all day. We design and print a keepsake photo book and ship it to your home.</p>
+        <span class="badge">Custom</span>
+        <h3>Activity packs, sorted for you</h3>
+        <p>ATV rides, white-water rafting, snorkeling, Mount Batur trekking and more — <a href="#" class="wa-link" data-msg="Hi Senja! I'd like a custom activity pack with transport included.">contact us</a> and we'll put together a competitive package with transport included.</p>
       </div>
     </div>
   </div>
@@ -550,7 +517,7 @@ footer a:hover{color:var(--gold-soft)}
     <div class="reviews-grid">
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>"Our driver felt like a friend showing us his island. The car was spotless, Wi-Fi worked the whole day, and the welcome pack was such a nice touch. Best day of our honeymoon."</p>
+        <p>"Our driver felt like a friend showing us his island. The car was spotless, Wi-Fi worked the whole day, and the drone footage was such a nice touch. Best day of our honeymoon."</p>
         <div class="who"><span class="ava">E</span><div><b>Emma &amp; Jack</b><small>United Kingdom · Ubud Signature</small></div></div>
       </div>
       <div class="review">
@@ -688,22 +655,9 @@ footer a:hover{color:var(--gold-soft)}
   </div>
 </div>
 
-<!-- Welcome pack popup -->
-<div class="pop-back" id="popBack">
-  <div class="pop">
-    <div class="pop-sun"></div>
-    <button class="pop-close" id="popClose" aria-label="Close">✕</button>
-    <div class="gift">🎁</div>
-    <h3>A little <em>surprise</em> for you</h3>
-    <p>Book your <b>first tour</b> with Senja and get our <b>Welcome Pack free</b> — cold drinks, local snacks, sunscreen and a mini route guide waiting on your seat. Want it?</p>
-    <a class="btn wa-link" href="#" data-msg="Hi Senja! 🎁 I want to claim my FREE Welcome Pack on my first tour. Which tour do you recommend?">Yes! Claim my free pack</a>
-    <button class="no" id="popNo">No thanks, I don't like gifts 😅</button>
-  </div>
-</div>
-
 <script>
 // ====== CONFIG ======
-const WA_NUMBER = "6281943289959";
+const WA_NUMBER = "6287899315865";
 const IG_URL = "https://instagram.com/senjabalitours";
 
 function wa(msg){ return "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(msg); }
@@ -757,11 +711,11 @@ function fmt(k){ return k>=1000 ? "IDR "+(k/1000).toFixed(1).replace(".0","")+"M
 // ====== Tours data ======
 const TOURS = [
   {
-    id:"ubud", title:"Ubud Signature", tag:"Best seller", grad:"g1", price:"IDR 750k", hours:"10h",
+    id:"ubud", title:"Ubud Signature", tag:"Best seller", grad:"g1", price:"IDR 900k", hours:"10h",
     short:["Sacred Monkey Forest","Tegalalang rice terraces & jungle swing","Tirta Empul holy water temple","Tegenungan waterfall","Luwak coffee plantation"],
-    desc:"The essential Ubud day, paced so you're at the rice terraces before the tour buses and at the waterfall when the light turns gold. Perfect first day in Bali — culture, jungle, water and coffee in one loop.",
+    desc:"The essential Ubud day, paced so you're at the rice terraces before the tour buses and at the waterfall when the light turns gold. Perfect first day in Bali — culture, jungle, water and coffee in one loop, with free drone footage of your day included.",
     itin:[
-      ["8:30","Hotel pickup — welcome pack on your seat"],
+      ["8:30","Hotel pickup"],
       ["9:15","Sacred Monkey Forest, Ubud"],
       ["10:45","Tegalalang rice terraces + optional jungle swing"],
       ["12:30","Lunch with valley views (we know the good warungs)"],
@@ -770,12 +724,12 @@ const TOURS = [
       ["17:00","Tegenungan waterfall at golden hour"],
       ["18:30","Drop-off at your hotel"]
     ],
-    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Senja welcome pack","Flexible timing — it's your day"]
+    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Drone footage of your day","Flexible timing — it's your day"]
   },
   {
-    id:"kintamani", title:"Kintamani & Mt Batur", tag:"Sunrise", grad:"g2", price:"IDR 850k", hours:"10h",
+    id:"kintamani", title:"Kintamani & Mt Batur", tag:"Sunrise", grad:"g2", price:"IDR 900k", hours:"10h",
     short:["Volcano & Lake Batur viewpoint","Buffet lunch above the caldera","Coffee plantation tasting","Tirta Empul purification temple","Tegenungan waterfall"],
-    desc:"Stand on the rim of an active volcano with Lake Batur glittering below. We time the viewpoint for the clearest skies, then wind back down through temples, coffee farms and waterfalls.",
+    desc:"Stand on the rim of an active volcano with Lake Batur glittering below. We time the viewpoint for the clearest skies, then wind back down through temples, coffee farms and waterfalls — drone footage of your day included at no extra cost.",
     itin:[
       ["7:30","Hotel pickup — beat the clouds to the caldera"],
       ["9:30","Kintamani viewpoint — Mt Batur & Lake Batur"],
@@ -785,28 +739,28 @@ const TOURS = [
       ["16:45","Tegenungan waterfall"],
       ["18:00","Drop-off at your hotel"]
     ],
-    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Senja welcome pack","Flexible timing — it's your day"]
+    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Drone footage of your day","Flexible timing — it's your day"]
   },
   {
-    id:"gates", title:"Gates of Heaven", tag:"Iconic photo", grad:"g3", price:"IDR 950k", hours:"12h",
+    id:"gates", title:"Gates of Heaven", tag:"Iconic photo", grad:"g3", price:"IDR 950k", hours:"10h",
     short:["Lempuyang Temple \"Gates of Heaven\"","Tirta Gangga water palace","Bukit Jambul rice terrace views","Goa Lawah bat cave temple","East-coast black sand beaches"],
-    desc:"THE Bali photo — you between the split gates of Lempuyang with Mt Agung behind. We leave early to skip the worst of the queue, then explore East Bali's water palaces and quiet coastline most visitors never see.",
+    desc:"THE Bali photo — you between the split gates of Lempuyang with Mt Agung behind. We leave early to skip the worst of the queue, then explore East Bali's water palaces and quiet coastline most visitors never see. Drone footage of your day included.",
     itin:[
       ["6:00","Early hotel pickup (trust us, it's worth it)"],
-      ["8:30","Lempuyang Temple — Gates of Heaven photo"],
-      ["11:00","Tirta Gangga royal water palace"],
-      ["12:30","Lunch in the East Bali hills"],
-      ["14:00","Bukit Jambul rice terrace viewpoint"],
-      ["15:30","Goa Lawah bat cave temple"],
-      ["16:30","Black sand beach stop on the coast road"],
-      ["18:00","Drop-off at your hotel"]
+      ["8:00","Lempuyang Temple — Gates of Heaven photo"],
+      ["10:30","Tirta Gangga royal water palace"],
+      ["12:00","Lunch in the East Bali hills"],
+      ["13:30","Bukit Jambul rice terrace viewpoint"],
+      ["14:30","Goa Lawah bat cave temple"],
+      ["15:30","Black sand beach stop on the coast road"],
+      ["16:00","Drop-off at your hotel"]
     ],
-    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Senja welcome pack","Queue tips & photo help at Lempuyang"]
+    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Drone footage of your day","Queue tips & photo help at Lempuyang"]
   },
   {
-    id:"tanahlot", title:"Tanah Lot & UNESCO", tag:"Sunset", grad:"g4", price:"IDR 850k", hours:"10h",
+    id:"tanahlot", title:"Tanah Lot & UNESCO", tag:"Sunset", grad:"g4", price:"IDR 900k", hours:"10h",
     short:["Jatiluwih UNESCO rice terraces","Ulun Danu Beratan lake temple","Taman Ayun royal temple","Tanah Lot at golden hour"],
-    desc:"A day of Bali's most beautiful landscapes, ending with the island's most famous sunset: Tanah Lot temple silhouetted against the ocean. We arrive when the light is perfect and the crowds are behind you.",
+    desc:"A day of Bali's most beautiful landscapes, ending with the island's most famous sunset: Tanah Lot temple silhouetted against the ocean. We arrive when the light is perfect and the crowds are behind you, with free drone footage of your day.",
     itin:[
       ["9:00","Hotel pickup"],
       ["10:30","Jatiluwih UNESCO rice terraces walk"],
@@ -816,40 +770,54 @@ const TOURS = [
       ["17:30","Tanah Lot for sunset 🌅"],
       ["19:30","Drop-off at your hotel"]
     ],
-    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Senja welcome pack","Sunset timing guaranteed"]
+    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Drone footage of your day","Sunset timing guaranteed"]
   },
   {
-    id:"lovina", title:"Lovina Dolphins & North", tag:"Early birds", grad:"g5", price:"IDR 1.1M", hours:"14h",
+    id:"lovina", title:"Lovina Dolphins & North", tag:"Early birds", grad:"g5", price:"IDR 1.1M", hours:"10h",
     short:["Wild dolphins at sunrise, Lovina Beach","Banjar hot springs","Brahmavihara Buddhist monastery","Gitgit waterfall","Lake Beratan on the way back"],
-    desc:"Hundreds of wild dolphins at sunrise off Lovina's black sand coast, then a slow, beautiful route home through hot springs, Bali's biggest Buddhist monastery and jungle waterfalls. A long day. An unforgettable one.",
+    desc:"Hundreds of wild dolphins at sunrise off Lovina's black sand coast, then a slow, beautiful route home through hot springs, Bali's biggest Buddhist monastery and jungle waterfalls. A long day, an unforgettable one — with free drone footage included.",
     itin:[
       ["3:30","Night pickup — sleep in the car, we've got you"],
       ["6:00","Traditional boat out to see wild dolphins 🐬"],
-      ["8:30","Breakfast on Lovina Beach"],
-      ["10:00","Banjar natural hot springs soak"],
-      ["11:30","Brahmavihara-Arama Buddhist monastery"],
-      ["13:00","Lunch in the northern hills"],
-      ["14:30","Gitgit waterfall"],
-      ["16:00","Ulun Danu Beratan lake temple stop"],
-      ["18:00","Drop-off at your hotel"]
+      ["8:00","Breakfast on Lovina Beach"],
+      ["9:30","Banjar natural hot springs soak"],
+      ["11:00","Brahmavihara-Arama Buddhist monastery"],
+      ["12:00","Lunch in the northern hills"],
+      ["13:00","Gitgit waterfall"],
+      ["13:30","Drop-off at your hotel"]
     ],
-    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Senja welcome pack","Dolphin boat arranged for you (ticket not incl.)"]
+    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Drone footage of your day","Dolphin boat arranged for you (ticket not incl.)"]
   },
   {
-    id:"uluwatu", title:"Uluwatu Sunset & Kecak", tag:"Fire & ocean", grad:"g6", price:"IDR 750k", hours:"9h",
+    id:"uluwatu", title:"Uluwatu Sunset & Kecak", tag:"Fire & ocean", grad:"g6", price:"IDR 900k", hours:"8h",
     short:["Melasti & Padang Padang beaches","Garuda Wisnu Kencana park","Uluwatu clifftop temple","Kecak fire dance at sunset","Jimbaran seafood dinner on the sand"],
-    desc:"The Bukit peninsula at its best: white-sand beaches, towering cliffs, and the hypnotic Kecak fire dance as the sun drops into the Indian Ocean. Finish with grilled seafood on the sand at Jimbaran.",
+    desc:"The Bukit peninsula at its best: white-sand beaches, towering cliffs, and the hypnotic Kecak fire dance as the sun drops into the Indian Ocean. Finish with grilled seafood on the sand at Jimbaran. Drone footage of your day included at no extra cost.",
     itin:[
-      ["10:00","Hotel pickup"],
-      ["11:00","Melasti Beach — cliffs & turquoise water"],
-      ["13:00","Lunch + Padang Padang Beach swim"],
-      ["15:00","Garuda Wisnu Kencana cultural park"],
-      ["17:00","Uluwatu Temple on the cliff edge"],
-      ["18:00","Kecak fire dance at sunset 🔥"],
+      ["12:00","Hotel pickup"],
+      ["13:00","Melasti Beach — cliffs & turquoise water"],
+      ["14:30","Lunch + Padang Padang Beach swim"],
+      ["16:00","Garuda Wisnu Kencana cultural park"],
+      ["17:30","Uluwatu Temple on the cliff edge"],
+      ["18:15","Kecak fire dance at sunset 🔥"],
       ["19:30","Jimbaran seafood dinner on the beach"],
-      ["21:00","Drop-off at your hotel"]
+      ["20:00","Drop-off at your hotel"]
     ],
-    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Senja welcome pack","Kecak tickets arranged (not incl.)"]
+    inc:["Private car up to 6 pax","English-speaking local driver","Fuel, parking & tolls","Wi-Fi, cold water & AC","Drone footage of your day","Kecak tickets arranged (not incl.)"]
+  },
+  {
+    id:"java", title:"Bali–Java Adventure", tag:"2D1N · Premium", grad:"g2", price:"From IDR 5M", hours:"2 days", perPerson:true,
+    short:["Ferry crossing to East Java","Ijen Crater blue fire & sunrise trek","Overnight in a private hotel room","Banyuwangi village & coastline","Private car & driver the whole way"],
+    desc:"A once-in-a-trip overnight escape from Bali: cross by ferry to Java, hike Ijen Crater in the dark to see the famous blue flames and sunrise over the volcanic lake, then explore Banyuwangi's coast before heading home. Fully private, all-inclusive, drone footage included, from IDR 5M per person (min. 2 people).",
+    itin:[
+      ["Day 1 · 14:00","Hotel pickup in Bali, drive to Gilimanuk"],
+      ["Day 1 · 17:00","Ferry crossing to Ketapang, East Java"],
+      ["Day 1 · 19:00","Check-in & dinner near Banyuwangi"],
+      ["Day 2 · 00:30","Depart for Ijen basecamp"],
+      ["Day 2 · 03:00","Trek to the crater — blue fire & sunrise"],
+      ["Day 2 · 09:00","Breakfast, ferry back to Bali"],
+      ["Day 2 · 17:00","Drop-off at your hotel"]
+    ],
+    inc:["Private car & driver for the full 2 days","Round-trip ferry crossing","1 night private hotel room","Dinner Day 1 & breakfast Day 2","Ijen entrance fees & trekking guide","Wi-Fi & AC on board","Drone footage of the trip"]
   }
 ];
 
@@ -905,7 +873,7 @@ TOURS.forEach((t,i)=>{
     <div class="tour-body">
       <ul>${t.short.map(s=>`<li>${s}</li>`).join("")}</ul>
       <div class="tour-foot">
-        <div class="p">${t.price}<small>per car · ${t.hours}</small></div>
+        <div class="p">${t.price}<small>${t.perPerson?"per person · "+t.hours:"per car · "+t.hours}</small></div>
         <span>View details →</span>
       </div>
     </div>`;
@@ -923,9 +891,9 @@ function openTour(i){
   document.getElementById("mDesc").textContent=t.desc;
   document.getElementById("mItin").innerHTML=t.itin.map(s=>`<li><b>${s[0]}</b>${s[1]}</li>`).join("");
   document.getElementById("mInc").innerHTML=t.inc.map(s=>`<li>${s}</li>`).join("");
-  document.getElementById("mPer").textContent="Private · per car (up to 6) · "+t.hours;
-  document.getElementById("mPrice").innerHTML=t.price+" <small>total, not per person</small>";
-  document.getElementById("mWa").href=wa(`Hi Senja! I'm interested in this tour 🌴\n⭐ Tour: ${t.title}\n💰 Price on your website: ${t.price} (per car)\n📅 Preferred date: \n👥 People: \n🏨 Pickup hotel/area: `);
+  document.getElementById("mPer").textContent=t.perPerson? "Private · per person (min. 2 people) · "+t.hours : "Private · per car (up to 6) · "+t.hours;
+  document.getElementById("mPrice").innerHTML=t.price+(t.perPerson? " <small>per person</small>" : " <small>total, not per person</small>");
+  document.getElementById("mWa").href=wa(`Hi Senja! I'm interested in this tour 🌴\n⭐ Tour: ${t.title}\n💰 Price on your website: ${t.price}${t.perPerson?" (per person)":" (per car)"}\n📅 Preferred date: \n👥 People: \n🏨 Pickup hotel/area: `);
   modalBack.classList.add("open");
   document.body.style.overflow="hidden";
 }
@@ -942,20 +910,6 @@ document.querySelectorAll(".wa-link").forEach(el=>{
   });
 });
 
-// ====== Welcome pack popup ======
-const popBack=document.getElementById("popBack");
-let popShown=false;
-function openPop(){
-  if(popShown) return;
-  popShown=true;
-  popBack.classList.add("open");
-}
-function closePop(){ popBack.classList.remove("open"); }
-document.getElementById("popClose").addEventListener("click",closePop);
-document.getElementById("popNo").addEventListener("click",closePop);
-popBack.addEventListener("click",e=>{ if(e.target===popBack) closePop(); });
-popBack.querySelector(".wa-link").addEventListener("click",closePop);
-setTimeout(openPop, 5000);
 </script>
 </body>
 </html>
