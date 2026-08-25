@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0RX5TNHWW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L0RX5TNHWW');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Senja Bali Tours — Private Driver, Day Tours &amp; Adventure Days in Bali</title>
@@ -201,9 +209,9 @@ select{
 .tour-body ul{list-style:none;flex:1;margin-bottom:16px}
 .tour-body li{font-size:14px;color:var(--ink-soft);padding:4px 0 4px 20px;position:relative}
 .tour-body li::before{content:"";position:absolute;left:0;top:12px;width:9px;height:2px;background:var(--amber)}
-.tour-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;font-size:13.5px}
+.tour-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;font-size:13.5px;gap:10px}
 .tour-foot .dur{color:var(--ink-soft);font-weight:600}
-.tour-foot .go{color:var(--amber);font-weight:700;display:flex;align-items:center;gap:6px}
+.tour-foot .go{color:var(--amber);font-weight:700;display:flex;align-items:center;gap:6px;white-space:nowrap}
 .note{margin-top:24px;font-size:14.5px;color:var(--ink-soft);max-width:720px}
 .note a{color:var(--amber);font-weight:600}
 @media(max-width:940px){.tours{grid-template-columns:1fr 1fr}}
@@ -332,7 +340,7 @@ footer a:hover{color:var(--amber-soft)}
       <h1>Bali, driven <em>the way locals live it.</em></h1>
       <p class="lede">One local driver for your whole trip — airport pickups, transfers across the island, full-day tours and adventure days. Tell us what you need and we'll send you a fixed, all-in price.</p>
       <ul class="hero-list">
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Full-day private tours of 8–9 hours, extra hours available</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Private tours from 6 to 12 hours — we adapt to your pace</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Free drone video of your day, filmed by your driver</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Wi-Fi, cold AC and your own music on board</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Price agreed in writing before you get in the car</li>
@@ -435,7 +443,7 @@ footer a:hover{color:var(--amber-soft)}
     <div class="head">
       <p class="eyebrow">Day tours</p>
       <h2>Full days, designed around the light.</h2>
-      <p>Eight to nine hours, private, at your pace — we plan each stop so you arrive when it's beautiful, not when it's crowded. Want to start earlier or stay out for sunset? Extra hours are easy to add.</p>
+      <p>Private, at your pace, planned so you arrive when each place is beautiful — not when it's crowded. Times below are door-to-door from central Ubud; if you're staying in Canggu, Uluwatu or Amed, your day gets shorter or longer depending on the drive. We'll confirm your exact pickup time on WhatsApp.</p>
     </div>
     <div class="tours" id="toursGrid"></div>
     <p class="note">Entrance tickets aren't included — we send you the exact price of every stop before you book, so nothing surprises you on the day. Prefer your own route, a multi-day trip or Bali–Java? <a href="#" class="wa-link" data-msg="Hi Senja! I'd like a custom itinerary. Here's what I have in mind:">Tell us on WhatsApp</a> and we'll build it around you.</p>
@@ -563,7 +571,7 @@ footer a:hover{color:var(--amber-soft)}
       </details>
       <details>
         <summary>How long is a day tour?</summary>
-        <p>Eight to nine hours door to door, from IDR 900k for the car. If you want an earlier start, a sunset stop or a longer day, extra hours can be added when you book.</p>
+        <p>It depends on the route and where you're staying. Most days run 8 to 10 hours door to door, from IDR 900k for the car. Sunrise tours start around 3 AM; the east-coast route is longer because of the drive. Every time is flexible — we adapt the whole day to your pickup point and how early you want to start.</p>
       </details>
       <details>
         <summary>How does the money-back guarantee work?</summary>
@@ -636,18 +644,18 @@ function wa(msg){ return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComp
 var AREAS = ["Ubud","Canggu","Seminyak","Kuta","Sanur","Uluwatu / Bukit","Nusa Dua","Amed","Sidemen","Lovina","Munduk","Airport (DPS)","Somewhere else"];
 
 var TOURS = [
-  { id:"ubud", title:"Ubud Signature", tag:"Best seller", grad:"g1",
-    stops:["Sacred Monkey Forest","Tegalalang rice terraces","Tirta Empul holy water temple","Luwak coffee tasting","Tegenungan waterfall at golden hour"] },
-  { id:"batur", title:"Kintamani &amp; Mt Batur", tag:"Volcano", grad:"g2",
-    stops:["Sunrise jeep or trek on Mt Batur","Lake Batur &amp; caldera viewpoint","Breakfast above the volcano","Coffee plantation walk","Waterfall on the way home"] },
-  { id:"gates", title:"Gates of Heaven", tag:"Iconic photo", grad:"g3",
-    stops:["Lempuyang Temple, early to beat the queue","Tirta Gangga water palace","Taman Ujung royal pools","Rice terrace viewpoints","Quiet east-coast beach"] },
-  { id:"tanahlot", title:"Tanah Lot &amp; UNESCO", tag:"Sunset", grad:"g4",
-    stops:["Jatiluwih UNESCO rice terraces","Ulun Danu Beratan lake temple","Taman Ayun royal temple","Tanah Lot at golden hour"] },
-  { id:"uluwatu", title:"Uluwatu &amp; Kecak", tag:"Fire &amp; ocean", grad:"g6",
-    stops:["Melasti &amp; Padang Padang beaches","Garuda Wisnu Kencana park","Uluwatu clifftop temple","Kecak fire dance at sunset","Seafood dinner on Jimbaran beach"] },
-  { id:"north", title:"North &amp; Waterfalls", tag:"Jungle", grad:"g5",
-    stops:["Sunrise dolphins off Lovina (optional)","Banjar hot springs","Buddhist monastery","Twin waterfalls near Munduk","Lake Beratan on the way back"] }
+  { id:"ubud", title:"Ubud Waterfalls &amp; Temples", tag:"Best seller", grad:"g1", dur:"8–9 hours",
+    stops:["Tegalalang rice terraces, early and quiet","Tirta Empul holy water temple","Luwak coffee tasting in the jungle","Tibumana or Tegenungan waterfall","Late lunch at a local warung"] },
+  { id:"batur", title:"Mt Batur Sunrise Jeep", tag:"Sunrise", grad:"g2", dur:"8–10 hours · starts ~3 AM",
+    stops:["4x4 jeep up the caldera for sunrise","Breakfast facing the volcano","Black lava field from the 1968 eruption","Natural hot springs by Lake Batur","Coffee plantation on the way down"] },
+  { id:"gates", title:"Gates of Heaven &amp; Tirta Gangga", tag:"Iconic photo", grad:"g3", dur:"10–12 hours · early start",
+    stops:["Lempuyang Temple, first in the queue","Tirta Gangga water palace","Taman Ujung royal pools","Quiet east-coast beach stop","Long drive each way — we start before dawn"] },
+  { id:"atv", title:"ATV Quad &amp; River Tubing", tag:"Adrenaline", grad:"g4", dur:"6–7 hours",
+    stops:["2 hours of ATV through rice fields and jungle","River tubing down the Ayung","Shower, towels and lunch included","Rice terrace stop on the way back","Perfect as a half-day, home by afternoon"] },
+  { id:"uluwatu", title:"Uluwatu &amp; Kecak Sunset", tag:"Fire &amp; ocean", grad:"g6", dur:"8–9 hours · ends at night",
+    stops:["Melasti or Padang Padang beach","Uluwatu clifftop temple","Kecak fire dance at sunset","Seafood dinner on Jimbaran beach"] },
+  { id:"north", title:"Jatiluwih &amp; Tanah Lot", tag:"UNESCO", grad:"g5", dur:"9–10 hours",
+    stops:["Ulun Danu Beratan lake temple","Jatiluwih UNESCO rice terraces","Twin waterfall near Munduk","Tanah Lot at golden hour"] }
 ];
 
 // ====== Guarantee marquee ======
@@ -699,7 +707,7 @@ TOURS.forEach(function(t){
   el.innerHTML =
     '<div class="tour-top ' + t.grad + '"><span class="tag">' + t.tag + '</span><h3>' + t.title + '</h3></div>' +
     '<div class="tour-body"><ul>' + t.stops.map(function(s){ return "<li>" + s + "</li>"; }).join("") + '</ul>' +
-    '<div class="tour-foot"><span class="dur">8–9 hours · private</span><span class="go">Ask about this tour →</span></div></div>';
+    '<div class="tour-foot"><span class="dur">' + t.dur + ' · private</span><span class="go">Ask about this tour →</span></div></div>';
   el.addEventListener("click", function(){
     window.open(wa("Hi Senja! I'm interested in this tour 🌴\n⭐ Tour: " + strip(t.title) +
       "\n👥 People: \n📅 Dates: \n🏨 Staying in: "), "_blank");
